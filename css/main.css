@@ -53,7 +53,7 @@ body {
     padding: 1rem 2.5rem;
     background-color: var(--primary-color);
     color: var(--white-text-color);
-    border-radius: 2rem;
+    border-radius: .3rem;
     transition: .4s ease;
 }
 
@@ -242,7 +242,7 @@ nav .icons .profile-drop-down::after {
     padding: .8rem 5rem;
     background-color: #FC0834;
     color: var(--white-text-color);
-    border-radius: 2rem;
+    border-radius: .3rem;
     transition: .4s ease;
     width: max-content;
 }
@@ -257,9 +257,9 @@ nav .icons .profile-drop-down::after {
 
 
 .product-img {
-    width: 180px;
+    width: 220px;
     /* Set a fixed width */
-    height: 180px;
+    height: 220px;
     /* Set a fixed height */
     overflow: hidden;
     /* Hide any overflow */
