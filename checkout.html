@@ -77,90 +77,113 @@
     </header>
 
     <main>
-        <section class="cart container py-5">
+        <section class="checkout container py-5">
             <div class="row">
-                <div class="col-lg-8 mb-5">
-                    <div class="product-cart">
-                        <h3>Shopping Cart</h3>
-                        <hr>
-
-                        <div class="d-flex align-items-start gap-1 gap-lg-2 mb-3">
-                            <img src="assets/product.png" alt="product" class="rounded-2 w-25 object-fit-contain"
-                                width="90" height="90" />
-                            <div class="d-flex flex-column checkout-description w-75">
-                                <p class="mb-1">Lorem ipsum dolo </p>
-                                <p class="mb-1">499 dhs</p>
-
-                                <form action="">
-                                    <div class="quantity d-inline-flex align-items-center">
-                                        <button class="btn"><i class="ri-add-line"></i></button>
-
-                                        <input type="text" name="quantity" class="form-control p-1 border-0 text-center"
-                                            readonly style="width: 30px; font-size: 12px;" value="1">
-
-                                        <button class="btn"><i class="ri-subtract-line"></i></button>
-
-                                    </div>
-                                </form>
-
-                            </div>
-                            <form action="">
-                                <button type="submit" class="btn"><i class="ri-delete-bin-7-line"></i></button>
-                            </form>
-                        </div>
-
-                        <!-- #2  -->
-                        <div class="d-flex align-items-start gap-1 gap-lg-2 mb-3">
-                            <img src="assets/product.png" alt="product" class="rounded-2 w-25 object-fit-contain"
-                                width="90" height="90" />
-                            <div class="d-flex flex-column checkout-description w-75">
-                                <p class="mb-1">Lorem ipsum dolo </p>
-                                <p class="mb-1">499 dhs</p>
-
-                                <form action="">
-                                    <div class="quantity d-inline-flex align-items-center">
-                                        <button class="btn"><i class="ri-add-line"></i></button>
-
-                                        <input type="text" name="quantity" class="form-control p-1 border-0 text-center"
-                                            readonly style="width: 30px; font-size: 12px;" value="1">
-
-                                        <button class="btn"><i class="ri-subtract-line"></i></button>
-
-                                    </div>
-                                </form>
-
-                            </div>
-                            <form action="">
-                                <button type="submit" class="btn"><i class="ri-delete-bin-7-line"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <h3>Proceed To Checkout</h3>
+                <div class="col-md-6 col-lg-8 mb-5">
+                    <h3 class="">Détails de facturation</h3>
                     <hr>
-                    <form action="">
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <p><strong>Total</strong></p>
-                            <p>499 Dhs</p>
+                    <form action="" method="POST">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail *</label>
+                            <input type="email" class="form-control" id="email" placeholder="Votre e-mail" required>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <p><strong>Shipping</strong></p>
-                            <p>Free Shipping</p>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="prenom" class="form-label">Prénom *</label>
+                                <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="nom" class="form-label">Nom *</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+                            </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <p><strong>Payment</strong></p>
-                            <p>Cash On Delievery</p>
+
+
+
+                        <div class="mb-3">
+                            <label for="adresse" class="form-label">Numéro et nom de rue *</label>
+                            <input type="text" class="form-control" id="adresse" placeholder="Numéro et nom de rue"
+                                required>
                         </div>
-                        <hr>
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <p><strong>Total (tax included)</strong></p>
-                            <p>499 Dhs</p>
+
+                        <div class="mb-3">
+                            <label for="appartement" class="form-label">Appartement, suite, unité, etc.
+                                (facultatif)</label>
+                            <input type="text" class="form-control" id="appartement"
+                                placeholder="Appartement, suite, unité, etc.">
                         </div>
-                        <!-- <button type="submit" class="btn btn-primary w-100">Checkout</button> -->
-                        <a href="checkout.html" class="btn btn-primary w-100">Checkout</a>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="ville" class="form-label">Ville *</label>
+                                <input type="text" class="form-control" id="ville" placeholder="Votre ville" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="codePostal" class="form-label">Code postal *</label>
+                                <input type="text" class="form-control" id="codePostal" placeholder="Votre code postal"
+                                    required>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="telephone" class="form-label">Téléphone *</label>
+                            <input type="tel" class="form-control" id="telephone"
+                                placeholder="Votre numéro de téléphone" required>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">Notes de commande (facultatif)</label>
+                            <textarea class="form-control" id="notes" rows="3"
+                                placeholder="Ajoutez des notes supplémentaires pour la commande"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
                     </form>
                 </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <h3>Cart</h3>
+                    <hr>
+                    <div class="border rounded-3 py-2 px-2">
+                      <!-- #1 -->
+                        <div class="d-flex align-items-start gap-1 gap-lg-2 mb-3">
+                            <img src="assets/product.png" alt="product" class="rounded-2 w-25" width="75" height="75" />
+                            <div class="d-flex flex-column checkout-description w-75">
+                                <p class="mb-1">Lorem ipsum dolo </p>
+                                <p class="mb-1">1 <span>X</span> 499 dhs</p>
+                                <p class="mb-0 ">
+                                    Subtotal: 499
+                                    dhs
+                                </p>
+                            </div>
+                        </div>
+                        
+                      <!-- #2 -->
+                      <div class="d-flex align-items-start gap-1 gap-lg-2 mb-3">
+                        <img src="assets/product.png" alt="product" class="rounded-2 w-25" width="75" height="75" />
+                        <div class="d-flex flex-column checkout-description w-75">
+                            <p class="mb-1">Lorem ipsum dolo </p>
+                            <p class="mb-1">1 <span>X</span> 499 dhs</p>
+                            <p class="mb-0 ">
+                                Subtotal: 499
+                                dhs
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
             </div>
         </section>
     </main>

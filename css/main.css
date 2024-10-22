@@ -396,7 +396,12 @@ footer form textarea {
 
 /* End Footer */
 
-/* CART */
-.cart-description {
+/* CHECKOUT */
+.checkout-description {
     font-size: 12px;
+}
+
+.cart .btn {
+    --bs-btn-padding-x: 0.35rem;
+    --bs-btn-padding-y: 0rem;
 }
